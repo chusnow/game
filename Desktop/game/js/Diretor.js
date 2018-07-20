@@ -13,6 +13,8 @@ export class Diretor {
     this.dataStore = DateStore.getInstance();
   }
   run(){
-    this.dataStore.get('background').draw();
+     this.dataStore.get('background').draw();
+     this.dataStore.get('land').draw();
+     requestAnimationFrame(() => this.run())
   }
 }

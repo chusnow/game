@@ -1,5 +1,4 @@
 //变量,数据管理
-
 export class DateStore {
   static getInstance (){
     if(!DateStore.instance){

@@ -7,9 +7,8 @@ export class Sprite {
     srcX = 0,
     srcW = 0,
     srcH = 0,
-    x = 0, y = 0,
+    x=0 , y = 0,
     width = 0, height = 0) {
-    
       this.ctx = ctx,
       this.img = img,
       this.srcY = srcY,
@@ -20,8 +19,6 @@ export class Sprite {
       this.y = y,
       this.width = width,
       this.height = height
-     
-      
   }
   /**
    * img 传入的Image对象
@@ -34,17 +31,26 @@ export class Sprite {
    * width 要使用的宽度
    * height 要使用的高度
    */
-  draw() {
+  draw(img = this.img,  // 有参数用参数 ，没有参数用自定义的
+      srcX = this.srcX,
+      srcY = this.srcY,
+      srcW = this.srcW,
+      srcH = this.srcH,
+      x = this.x,
+      y = this.y,
+      width = this.width,
+      height = this.height
+  ) {
       this.ctx.drawImage(
-        this.img ,
-        this.srcY ,
-        this.srcX ,
-        this.srcW ,
-        this.srcH ,
-        this.x ,
-        this.y ,
-        this.width ,
-        this.height ,
+        img ,
+        srcY ,
+        srcX ,
+        srcW ,
+        srcH ,
+        x ,
+        y ,
+        width ,
+        height ,
       );
   }
 }
